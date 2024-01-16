@@ -1,0 +1,11 @@
+@CalculatorServer_HostAddress = http://localhost:5281
+
+POST {{CalculatorServer_HostAddress}}/api/Calculator
+Content-Type: application/json
+Accept: application/json
+
+{
+  "expression": "1+5"
+}
+
+###
