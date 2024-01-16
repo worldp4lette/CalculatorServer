@@ -4,5 +4,6 @@
     {
         public void Calculate(string exp);
         public double GetAns();
+        public Task<double> CalculateComplexExpression(string exp);
     }
 }

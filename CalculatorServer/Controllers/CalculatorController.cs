@@ -29,6 +29,20 @@ namespace CalculatorServer.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPost("ComplexExpression")]
+        public async Task<IActionResult> CalculateComplexExpression([FromBody] CalculationRequest expression)
+        {
+            try
+            {
+                var result = await _calculator.CalculateComplexExpression(expression.Expression);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 
     public class CalculationRequest

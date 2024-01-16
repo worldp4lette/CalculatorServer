@@ -132,6 +132,14 @@
             }
         }
 
+        public async Task<double> CalculateComplexExpression(string line)
+        {
+            await Task.Delay(5000);
+            var calculator = new Calculator();
+            calculator.Calculate(line);
+            return calculator.GetAns();
+        }
+
         public void Print()
         {
             Console.WriteLine($"Answer: {Ans}");
